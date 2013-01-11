@@ -1,0 +1,13 @@
+!SESSION 2013-01-11 15:59:31.691 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.7.0_10
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2013-01-11 16:05:38.548
+!MESSAGE Failed to open search index.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-01-11 16:08:20.112
+!MESSAGE 'remote-models (http://download.eclipse.org/recommenders/models/juno/, releases+snapshots)' did not send ETAG header for 'jre:jre:zip:call:1.0.0'.

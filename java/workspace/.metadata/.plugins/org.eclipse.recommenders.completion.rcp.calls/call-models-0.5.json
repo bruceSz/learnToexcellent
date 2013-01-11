@@ -1,0 +1,12 @@
+{
+  "/usr/java/jdk1.7.0_10/jre/lib/rt.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
+    "location": "/usr/java/jdk1.7.0_10/jre/lib/rt.jar",
+    "status": "RESOLVED"
+  },
+  "/home/brucesz/exercise/java/workspace/multi-thread/src": {
+    "location": "/home/brucesz/exercise/java/workspace/multi-thread/src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/home/brucesz/exercise/java/workspace/multi-thread/src\u0027. Skipped."
+  }
+}

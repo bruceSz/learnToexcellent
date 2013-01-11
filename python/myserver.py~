@@ -1,0 +1,7 @@
+#!/usr/bin/python
+#filename:myserver.py
+import socket
+HOST = ''
+PORT = 8000
+reply='Yes'
+s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)

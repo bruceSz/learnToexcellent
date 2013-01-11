@@ -1,0 +1,158 @@
+[
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "467809d982f3f499c634fb7dbd6121bdd9c50f0f",
+    "jarFileModificationDate": "2012-11-28T20:20:21+08:00",
+    "location": "/usr/java/jdk1.7.0_10/jre/lib/ext/sunec.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "1658839fa9723c2f4365b71a591cf1cf3f1bbaf8",
+    "jarFileModificationDate": "2012-11-28T20:20:21+08:00",
+    "location": "/usr/java/jdk1.7.0_10/jre/lib/ext/sunpkcs11.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "1b7b327021142a4d748e347bc75ea7c504b53119",
+    "jarFileModificationDate": "2012-11-28T20:20:23+08:00",
+    "location": "/usr/java/jdk1.7.0_10/jre/lib/jfr.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "425e657f878d5a3e2bed476a4e1c12210d2403f4",
+    "jarFileModificationDate": "2012-11-28T20:18:31+08:00",
+    "location": "/usr/java/jdk1.7.0_10/jre/lib/jsse.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "5689fa494f33676c6a37860ea7d612cc434c7240",
+    "jarFileModificationDate": "2012-11-28T20:20:01+08:00",
+    "location": "/usr/java/jdk1.7.0_10/jre/lib/rt.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b428105b88cb30f5824e797203d9bca21357da2c",
+    "jarFileModificationDate": "2012-11-28T20:20:42+08:00",
+    "location": "/usr/java/jdk1.7.0_10/jre/lib/resources.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "8d86d04f491d768b28cf355f5327c9915ece4c3f",
+    "jarFileModificationDate": "2012-11-28T20:20:23+08:00",
+    "location": "/usr/java/jdk1.7.0_10/jre/lib/ext/zipfs.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "26ef3c85da8a43683097f36fe170bb4e7edecc5b",
+    "jarFileModificationDate": "2012-11-28T20:20:23+08:00",
+    "location": "/usr/java/jdk1.7.0_10/jre/lib/ext/localedata.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "e06221a50df98b278852032452387d6c6178192c",
+    "jarFileModificationDate": "2012-11-28T20:20:22+08:00",
+    "location": "/usr/java/jdk1.7.0_10/jre/lib/ext/sunjce_provider.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "bb3d032442c59beaedfb04a9e000c5397d64981f",
+    "jarFileModificationDate": "2012-11-28T20:20:20+08:00",
+    "location": "/usr/java/jdk1.7.0_10/jre/lib/ext/dnsns.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "89bcc8499d5eff93b2c09539f7f3b6303b91e594",
+    "jarFileModificationDate": "2012-11-28T20:18:33+08:00",
+    "location": "/usr/java/jdk1.7.0_10/jre/lib/charsets.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "e69203117d45cb911e2770f37b0c10b9c4631a19",
+    "jarFileModificationDate": "2012-11-28T20:20:44+08:00",
+    "location": "/usr/java/jdk1.7.0_10/jre/lib/jce.jar",
+    "javaRuntime": true
+  }
+]

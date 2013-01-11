@@ -1,0 +1,7 @@
+{
+  "/usr/java/jdk1.7.0_10/jre/lib/rt.jar": {
+    "coordinate": "jre:jre:zip:ovrm:1.0.0",
+    "location": "/usr/java/jdk1.7.0_10/jre/lib/rt.jar",
+    "status": "RESOLVED"
+  }
+}

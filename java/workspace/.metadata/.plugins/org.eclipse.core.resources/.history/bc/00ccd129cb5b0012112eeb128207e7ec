@@ -1,0 +1,20 @@
+package threads;
+import java.util.Timer;
+
+
+
+/**
+ * @author brucesz
+ *
+ */
+public class TimerTest2 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Timer timer = new Timer();
+		MyTask myTask1 = new MyTask();
+		MyTask mytask1 = new MyTask();
+	}
+}

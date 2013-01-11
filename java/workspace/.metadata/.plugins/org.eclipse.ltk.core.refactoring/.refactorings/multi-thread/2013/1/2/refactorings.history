@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;TimerTest2.java&apos; to &apos;threads.MyTask.java&apos;&#x0A;- Original project: &apos;multi-thread&apos;&#x0A;- Destination element: &apos;threads.MyTask.java&apos;&#x0A;- Original element: &apos;TimerTest2.java&apos;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;threads{MyTask.java" element1="/src&lt;{TimerTest2.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1357893211892" units="1" version="1.0"/>
+</session>
