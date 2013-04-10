@@ -1,0 +1,15 @@
+""" basic wiki using webpy """
+
+import web
+import model
+import markdown
+###url mappings
+urls=(
+    '/','index',
+    '/new','new',
+    '/edit/(\d+)','edit',
+    '/delete/(\d+)','delete',
+    '/(.*)','page',
+)
+
+

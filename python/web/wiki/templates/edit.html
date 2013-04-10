@@ -1,0 +1,13 @@
+$def with (page,form)
+
+<h1> edit $form.d.title<h1>
+    
+<form action ="" method="post">
+  $:form.render()
+</form>
+
+<h2>delete page?</h2>
+<form action="/delete/$page.id" method="post">
+  <input type="submit" value="delete page"/>
+</form>
+
