@@ -1,0 +1,13 @@
+import time
+SLEEP = 0.5
+class TC1:
+    def run(self):
+        print ('####in test 1####')
+        time.slep(SLEEP)
+        print ('setting up')
+        time.sleep(SLEEP)
+        print('running test')
+        time.sleep(SLEEP)
+        print('tearing down')
+        time.sleep(SLEEP)
+        print ('test finished\n')
