@@ -1,0 +1,12 @@
+package main
+import (
+	"fmt"
+	"net/http"
+	"strings"
+	"log"
+	)
+func sayhelloName( w http.ResponseSWriter, r * http.Request) {
+	r.ParseForm()
+	fmt.Println(r.Form)
+	fmt.Println("path",r.URL.Path)
+}
