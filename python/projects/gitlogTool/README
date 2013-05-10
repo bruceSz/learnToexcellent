@@ -1,0 +1,41 @@
+
+  1.Hhis is a just naive git log analyse tool
+
+  2.Runing system must have expect installed 
+
+  3.Target system must has sshd running
+
+  4.The targetsystem's username,passwd,targetdir(of git repository)
+	are configure in  gitlogsetting.conf target author names and time
+	spans are also configured there.
+
+  5.How to run :
+		1>the main here is gitloganalyse.py,so to run this little 
+		  tool you have to key in "python gitloganalyse.py"
+
+		2>the commitLimit.py here is for generate git log command
+
+		3>the configparse.py is for parse the configure file
+		  (here is gitlogsetting.conf)
+
+		4>the execRemoteCommand.py here is used to login remote
+		  machine using configured username and passwd ,change into
+		  targetdir and exec corresponding command.
+		  
+		5>the expectscp.sh is a shell that copy remote file into local
+		  machine.
+
+		6>the gitlogsetting.conf is a configure file which is ugly now.
+		  (i will improve it soon)
+	
+ 6.Some explain: 
+		the tool run like this:
+
+		1> parse configure file 
+		2> login in target machine and change into target dir
+		3> do staff...(running command) 
+		4> redirect command executing result to a temp file 
+		5> copy remote temp file to a local one
+		6> read local temp file and print it out 
+
+

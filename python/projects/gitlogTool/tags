@@ -1,0 +1,50 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ConfigParser	configparse.py	/^	import ConfigParser$/;"	i
+__init__	commitLimit.py	/^	def __init__(self):$/;"	m	class:commandFactory
+__init__	configparse.py	/^	def __init__(self,configFile):$/;"	m	class:configReader
+__init__	execRemoteCommand.py	/^	def __init__(self,host,user,passwd):$/;"	m	class:expectCopy
+__init__	execRemoteCommand.py	/^	def __init__(self,hostname,username,password):$/;"	m	class:sshRemote
+__init__	gitloganalyse.py	/^	def __init__(self,conf,remote):$/;"	m	class:gitLogAnalyser
+and	configparse.py	/^	print('ConfigParser import error , check and install it')$/;"	i
+chdir	execRemoteCommand.py	/^	def chdir(self,dir='~\/'):$/;"	m	class:sshRemote
+check	configparse.py	/^	print('ConfigParser import error , check and install it')$/;"	i
+checkFlag	gitloganalyse.py	/^	def checkFlag(self,flag):$/;"	m	class:gitLogAnalyser
+commandFactory	commitLimit.py	/^class commandFactory():$/;"	c
+commitLimit	gitloganalyse.py	/^import commitLimit$/;"	i
+conf	gitloganalyse.py	/^	conf=configparse.configReader('gitlogsetting.conf')$/;"	v
+configReader	configparse.py	/^class configReader():$/;"	c
+configparse	gitloganalyse.py	/^import configparse$/;"	i
+copy	execRemoteCommand.py	/^	def copy(self,cur,remote):$/;"	m	class:expectCopy
+doCommand	execRemoteCommand.py	/^	def doCommand(self,command):$/;"	m	class:sshRemote
+error	configparse.py	/^	print('ConfigParser import error , check and install it')$/;"	i
+execRemoteCommand	gitloganalyse.py	/^import execRemoteCommand$/;"	i
+expectCopy	execRemoteCommand.py	/^class expectCopy():$/;"	c
+flag	gitloganalyse.py	/^	flag=0$/;"	v
+getGitLogLimits	gitloganalyse.py	/^	def getGitLogLimits(self):$/;"	m	class:gitLogAnalyser
+getRet	execRemoteCommand.py	/^	def getRet(self):$/;"	m	class:sshRemote
+getTargetOption	configparse.py	/^	def getTargetOption(self,sectionname,optionname):$/;"	m	class:configReader
+getTargetSection	configparse.py	/^	def getTargetSection(self,sectionname):$/;"	m	class:configReader
+gitLogAnalyser	gitloganalyse.py	/^class gitLogAnalyser():$/;"	c
+gitLogCounter	commitLimit.py	/^	def gitLogCounter(self,gitlog):$/;"	m	class:commandFactory
+gitLogDetailWithLimit	gitloganalyse.py	/^	def gitLogDetailWithLimit(self,num):$/;"	m	class:gitLogAnalyser
+install	configparse.py	/^	print('ConfigParser import error , check and install it')$/;"	i
+it	configparse.py	/^	print('ConfigParser import error , check and install it')$/;"	i
+login	execRemoteCommand.py	/^	def login(self):$/;"	m	class:sshRemote
+machine	gitloganalyse.py	/^	machine=conf.getTargetOption(remoteinfo,'targetmachine')$/;"	v
+os	execRemoteCommand.py	/^import os$/;"	i
+password	gitloganalyse.py	/^	password=conf.getTargetOption(remoteinfo,'targetuserpasswd')$/;"	v
+pexpect	execRemoteCommand.py	/^	import pexpect$/;"	i
+readGitLogLimitsFromConfig	gitloganalyse.py	/^	def readGitLogLimitsFromConfig(self):$/;"	m	class:gitLogAnalyser
+remote	gitloganalyse.py	/^	remote=execRemoteCommand.sshRemote(machine,user,password)$/;"	v
+remotedir	gitloganalyse.py	/^	remotedir=conf.getTargetOption(remoteinfo,'targetdir')$/;"	v
+remoteinfo	gitloganalyse.py	/^	remoteinfo='remoteinfo'$/;"	v
+s	execRemoteCommand.py	/^	s=sshRemote('127.0.0.1','szhang','2009101523')$/;"	v
+sshRemote	execRemoteCommand.py	/^class sshRemote():$/;"	c
+te	gitloganalyse.py	/^	te=gitLogAnalyser(conf,remote)$/;"	v
+testconfigReader	configparse.py	/^def testconfigReader():$/;"	f
+user	gitloganalyse.py	/^	user=conf.getTargetOption(remoteinfo,'targetuser')$/;"	v
