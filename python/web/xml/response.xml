@@ -1,5 +1,0 @@
-$def with (code)
-<?xml version = "1.0"?>
-<RequestNotification-Response>
-<Status>$code</Status>
-</RequestNotification-Response>

@@ -1,3 +1,0 @@
-import web
-DB = web.database(dbn='')
-cache=False

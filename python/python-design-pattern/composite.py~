@@ -1,8 +1,0 @@
-__author__ = "zs:copied from andand b pihhai"
-__maintainer__ = 'zs'
-__version__ = '1.0'
-
-def normalize(val):
-    ""
-    if val.find('-') != -1:
-        val = val.replace('-','_')
