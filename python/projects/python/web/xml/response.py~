@@ -1,0 +1,3 @@
+import web 
+render  = web.application.render('templates/',cache=False)
+urls = ('/(.*)','index')

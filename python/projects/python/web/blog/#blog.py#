@@ -1,0 +1,8 @@
+""" basic use web.py"""
+import web 
+import model
+
+urls = (
+    '/','Index',
+    ‘
+)
