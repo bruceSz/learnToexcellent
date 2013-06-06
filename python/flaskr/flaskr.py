@@ -39,9 +39,18 @@ def teardown_request(exception):
 @app.route('/login',methods=['GET','POST'])
 def login():
     error = None
-    session['logged_in'] = True
-    flash('automatically logged in.')
-    return redirect(url_for('show_entries'))
+    if request.method == 'POST':
+        if request.form['username'] != app.config['USERNAME']:
+            error = 'invalid username'
+        elif request.form['password'] != app.config['PASSWORD']:
+            error = 'invalid password'
+        else:
+            session['logged_in'] = True
+            flash('you are logged in')
+            return redirect(url_for('show_entries'))
+
+    return render_template('login.html',error=error)
+
 
 @app.route('/add',methods=['post'])
 def add_entry():
