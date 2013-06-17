@@ -1,10 +1,10 @@
 #!/usr/bin/python
 import httplib
 import json
-url = "9.123.106.95:5000"
+url = "9.123.137.200:5000"
 osuser = "admin"
 ospassword = "Passw0rd"
-params = '{"auth":{"passwordCredentials":{"username":"admin","password":"Passw0rd"},"tenantId":"03b514b1b07545879f8d3a79805a2b94"}}'
+params = '{"auth":{"passwordCredentials":{"username":"admin","password":"Passw0rd"},"tenantId":"fd881b9cdc904e33871d5038f6397c4c"}}'
 headers = {"Content-Type":"application/json"}
 conn = httplib.HTTPConnection(url)
 conn.request("POST","/v2.0/tokens",params,headers)
