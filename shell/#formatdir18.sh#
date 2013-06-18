@@ -1,0 +1,11 @@
+#!/bin/sh
+# formatdir - output a directory listing in a friendly and useful format.
+
+gmk()
+{
+    #given input in kb,output in kb,mb,gb for best output format
+    if [ $1 -ge 1000000 ];then
+	echo "$(scriptbc -p 2 $1 / 1000000)GB"
+    elif [ $1 -ge 1000 ];then
+	
+}
