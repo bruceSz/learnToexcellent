@@ -111,7 +111,6 @@ def repl(propmt='lis.py>'):
 		if val is not None : print to_string(val)
 if __name__ == '__main__':
 
-	print t1
 	parse = read
 	repl()
 
