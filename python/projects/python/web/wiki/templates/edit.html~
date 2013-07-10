@@ -1,7 +1,0 @@
-$def with (page,form)
-
-<h1> edit $form.d.title<h1>
-    
-<form action ="" method="post">
-  $:form.render()
-</form>
