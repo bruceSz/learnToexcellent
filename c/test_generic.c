@@ -3,7 +3,14 @@ struct student {
     char *name;
     int number;
 };
+int StrCmp(void *vp1,void *vp2){
+    char * s1 = *(char **)vp1;
+    char * s2 = *(char **)vp2;
+    return strcmp(s1,s2);
+}
+
 void * lsearch(void *key,
+
 	    void * base,
 	    int n,
 	    int elementSize) {
