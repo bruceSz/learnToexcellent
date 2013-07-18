@@ -3,6 +3,8 @@
 
 list_length([]) ->
 	0;
-list_length([First|Rest]) ->
-	 1 +list_length(Rest).
+list_length([X]) ->
+        1;
+list_length([F|Rest]) ->
+	list_length(F) +list_length(Rest).
 
