@@ -51,7 +51,7 @@
 %%% Change the function below to return the name of the node where the
 %%% messenger server runs
 server_node()->
-    messenger@bruceSz;
+    messenger@localhost.
 
 %%% This is the server process for the "messenger"
 %%% the user list has the format [{ClientPid1,Name1},{ClientPid2,Name2},...]
@@ -60,7 +60,7 @@ server(User_List)->
     receive 
 	{From,logon,Name}->
 	    New_User_List=server_logon(From,Name,User_List),
-	    server(New_user_list);
+	    server(New_User_List);
 	{From,logoff}->
 	    New_User_List=server_logoff(From,User_List),
 	    server(New_User_List);
