@@ -1,3 +1,0 @@
-class DrawingAPI1:
-    def drawCircle(self,x,y,radius):
-        print ('API.circle at {}:{} radius {}'.format(x,y,radius))
