@@ -1,5 +1,5 @@
 -module(sort).
--export([find_max/1,select_sort/1]).
+-export([find_max/1,select_sort/1,qsort/1]).
 
 %%find max
 %%assume the L is non empty.
@@ -41,14 +41,44 @@ do_select_sort(L,R)->
 %% bubble sort
 %% the bubble here switch max into list tail.
 
-bubble_sort(L)->
-    do_bubble_sort(L,[]).
-
-do_bubble_sort([],R)->
-    L;
-do_bubbke_sort(L,R)->
-    B = bubble(L),
-    T = tail(B),
-    Rest = delete(B,T),
-    do_bubble_sort(Rest,[T|R]).
+%bubble_sort(L)->
+%    do_bubble_sort(L,[]).
+%
+%do_bubble_sort([],R)->
+%    L;
+%do_bubbke_sort(L,R)->
+%    B = bubble(L),
+%    T = tail(B),
+%    Rest = delete(B,T),
+%    do_bubble_sort(Rest,[T|R]).
     
+qsort([])->
+	[];
+qsort([H|T])->
+	L =smaller(T,H,[]),
+	L1 = qsort(L),
+
+    R =larger(T,H,[]),
+	R1 = qsort(R),
+	lists:append(L1,[H],R1).
+
+smaller([],P,R)->
+	R;
+smaller([H|T],P,R)->
+	if
+		H =< P ->
+			smaller(T,P,[H|R]);
+		H > P ->
+			smaller(T,P,R)
+	end.
+
+
+larger([],P,R) ->
+	R;
+larger([H|T],P,R)->
+	if 
+		H > P ->
+			larger(T,P,[H|R]);
+		H =< P ->
+			larger(T,P,R)
+	end.
