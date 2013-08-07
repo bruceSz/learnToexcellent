@@ -27,6 +27,7 @@ createProcess(N,M,Pid0)->
     Current_PID.
 
 loop(Next_PID)->
+    
     receive 
 	{From,Message}->
 	    Next_PID ! Message,
