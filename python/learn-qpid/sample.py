@@ -18,6 +18,10 @@ class configuration():
 			if not self.inner_address:
 				self.inner_address = self.cf.get('DEFAULT','address')
 			return self.inner_address
+		if key == 'timeout':
+			if not self.inner_timeout:
+				self.inner_timeout = int(self.cf.get('DEFAULT','timeout'))
+			return self.inner_timeout
 	
 conf = configuration()
 #from oslo.config import cfg
@@ -37,18 +41,22 @@ conf = configuration()
 class test_method():
 
 	def send(self,argv,session,address):
+		if len(argv) < 3:
+			print "please input message to be send"
+			sys.exit()
+
 		sender = session.sender(address)
-		sender.send(Message("hello world"))
+		sender.send(Message(argv[2]))
 
 	def receive_ack(self,argv,session,address):
 		receiver = session.receiver(address)
-		message = receiver.fetch(timeout=1)
+		message = receiver.fetch(timeout=conf.timeout)
 		session.acknowledge()
 		return message
 
 	def receive(self,argv,session,address):
 		receiver = session.receiver(address)
-		message = receiver.fetch(timeout=1)
+		message = receiver.fetch(timeout=conf.timeout)
 		return message
 
 def test(argv):
