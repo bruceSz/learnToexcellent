@@ -1,5 +1,5 @@
 package main
-
+file.println(msg);
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
