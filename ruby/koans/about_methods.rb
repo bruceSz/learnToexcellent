@@ -7,18 +7,18 @@ end
 class AboutMethods < Neo::Koan
 
   def test_calling_global_methods
-    assert_equal __, my_global_method(2,3)
+    assert_equal 5, my_global_method(2,3)
   end
 
   def test_calling_global_methods_without_parentheses
     result = my_global_method 2, 3
-    assert_equal __, result
+    assert_equal 5, result
   end
 
   # (NOTE: We are Using eval below because the example code is
   # considered to be syntactically invalid).
   def test_sometimes_missing_parentheses_are_ambiguous
-    eval "assert_equal 5, my_global_method 2, 3" # ENABLE CHECK
+    eval "assert_equal 5, my_global_method(2, 3)" # ENABLE CHECK
     #
     # Ruby doesn't know if you mean:
     #
