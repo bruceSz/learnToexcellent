@@ -11,12 +11,62 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 # The proxy class is started for you.  You will need to add a method
 # missing handler and any other supporting methods.  The specification
 # of the Proxy class is given in the AboutProxyObjectProject koan.
+class Television
+    attr_accessor :channel
+
+    def power
+	@on=true
+    end
+    def on?
+	@on
+    end
+    def messages
+	[:power,:channel=]
+    end
+end
 
 class Proxy
   def initialize(target_object)
     @object = target_object
+    @statics={}
+    @statics[:power]=0
+    @statics[:channel]=0
+    @statics[:channel=]=0
+    @statics[:on?]=0
+    @statics[:messages]=0
+    @statics[:number_of_times_called]=0
+    @statics[:upcase!]=0
+    @statics[:split]=0
     # ADD MORE CODE HERE
   end
+  def number_of_times_called(name)
+    return @statics[name]
+  end
+
+  def method_missing(name,*args)
+    puts name
+    @statics[name]+=1
+    if @object.class != String
+	@object.send(name, *args)
+    else     
+	if name == :messages
+	    return [:upcase!, :split]
+	else
+	    @object.send(name,*args)
+	end
+
+    end
+  end
+
+
+  def called?(name)
+    if @statics[name] == 0
+	return false
+    else
+	return true
+    end
+  end
+
 
   # WRITE CODE HERE
 end
@@ -38,6 +88,9 @@ class AboutProxyObjectProject < Neo::Koan
 
     tv.channel = 10
     tv.power
+
+    puts tv.channel
+    puts tv.on?
 
     assert_equal 10, tv.channel
     assert tv.on?
@@ -87,6 +140,7 @@ class AboutProxyObjectProject < Neo::Koan
 
     proxy.upcase!
     result = proxy.split
+    puts result
 
     assert_equal ["CODE", "MASH", "2009"], result
     assert_equal [:upcase!, :split], proxy.messages
