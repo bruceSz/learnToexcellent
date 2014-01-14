@@ -1,0 +1,47 @@
+#!/bin/bash
+# this sh file should be placed under /etc/init.d to utilize service command.
+
+function get_mongod_pid(){
+    local l_pid=`ps -ef|grep mongod|grep -v grep|grep -v bash|grep -v service|awk '{print $2}'`
+    echo $l_pid
+}
+
+if [ $# -eq 0 -o $# -gt 1 ];then
+    echo $USAGE
+    exit 1
+fi
+
+case "$1" in
+start)
+    pid=`get_mongod_pid`
+    if [ -z "$pid" ];then
+        /usr/bin/nohup /var/lib/mongo/bin/mongod --dbpath=/var/lib/mongo/data/db >/var/log/mongo/mongo.log 2>&1 & 
+        pid_new=`get_mongod_pid`
+        echo mongod is running. $pid_new
+    else
+        echo "mongod is already running.$pid"
+    fi
+    ;;
+status)
+    pid=`get_mongod_pid`
+    if [ -z "$pid" ];then
+        echo "mongod is not running"
+    else
+        echo "mongod is running.$pid"
+    fi
+    ;;
+stop)
+    pid_old=`get_mongod_pid`
+    if [ -z $pid_old ];then
+        echo mongod is not running 
+        exit 1
+    fi
+
+    #echo killing mongod\($pid_old\)
+    `kill -9 $pid_old` 
+    pid=`get_mongod_pid`
+    if [ -z $pid ];then
+        echo mongod\($pid_old\) stopped.
+    fi
+    ;;
+esac

@@ -1,0 +1,4 @@
+express = require "express"
+redis = require "redis"
+db = redis.createClient()
+app = express()
