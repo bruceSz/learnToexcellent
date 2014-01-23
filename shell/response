@@ -1,0 +1,15 @@
+ndicate whether the license agreement been accepted
+#----------------------------------------------------
+LICENSE_ACCEPTED=TRUE
+#Choose Install Folder
+#---------------------
+USER_INSTALL_DIR=/opt/other/other_product
+#Choose Link Location
+#--------------------
+USER_SHORTCUTS=/root/other_product
+#product alias used as install folder name
+#--------------------
+PRODUCT_ALIAS=other_product
+#Controller node ip
+#------------------
+CONTROLLER_IP="10.2.3.235"

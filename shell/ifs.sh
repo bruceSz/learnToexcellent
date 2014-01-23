@@ -8,3 +8,5 @@ for item in $data
   echo item:$item
  done
 IFS=$oldIFS
+ps
+ps|grep $$|awk '{print $4}'
