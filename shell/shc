@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Howto: modify this file to make it executable.
+# place this file into dirs listed in PATH
+# try shc xxx.c.
+
+if [ A$1 = A ];
+then
+    echo "Usage: shc xxx.c,
+            this tools is for running little c executable file.(learn and test)."
+    exit 1
+fi
+
+gcc $1 -o ${1%.*} 
+./${1%.*}
+rm ${1%.*}
