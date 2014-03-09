@@ -4,6 +4,7 @@ from mysite.views import current_time
 from mysite.views import hours_ahead
 from mysite.views import display_meta
 from books import views
+from books.contact import views as contact_view
 
 
 from django.contrib import admin
@@ -21,4 +22,5 @@ urlpatterns = patterns('',
     url(r'^time/plus/(\d{1,2})',hours_ahead),
     url(r'^meta/$',display_meta),
     url(r'^search/$',views.search),
+    url(r'^contact/$',contact_view.contact),
 )
