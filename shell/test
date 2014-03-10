@@ -1,0 +1,11 @@
+[openstack]
+test = 1
+auth_url = https://9.111.114.21/powervc/openstack/identity/v3
+admin_password = ddd
+connection_cacert = 
+
+[admin]
+test = 1
+qpid_hostname = fdfd
+qpid_password = fdfd
+qpid_protocol = tcp 
