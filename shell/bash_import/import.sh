@@ -1,29 +1,52 @@
+@absolute
 function exists() {
-    echo $*
+    #echo $*
 
-    parrents=$(pwd|sed '/\// /g')
-    for i in $parrents;
+    #parrents=$(pwd|sed '/\// /g')
+    #for i in $parrents;
+    #do
+    #    echo ''#if [ $i == ]
+    #done
+    #return 0
+}
+
+function get_real_path() {
+    args=$*
+    args_n=$(echo $args|sed 's/\./\//g')
+    #if [ "$args" == "$args_n" ];then
+    #    echo $args_n
+    #fi
+    root_dir=${args_n%%/*}
+    cur_path=`pwd`
+    dirs=$(echo $cur_path|sed 's/\./ /g')
+    for dir in $dirs;
     do
-        if [ $i == ]
+        if [ "$dir" == "${root_dir}" ];
+        then
+            cur_path=${cur_path%%${dir}*}
+            break
+        fi
     done
-    return 0
+    cur_path=${cur_path%%/}
+    echo ${cur_path}/${args_n}
+
+
+    
 }
 function import() {
     filenames="$*"
     filenames=$(echo $filenames|sed 's/,/ /g')
     for fn in $filenames;
     do
-        fn=$(echo ${fn}|sed 's/\./\//g')
-        echo $fn
+        fn=$(get_real_path $fn) 
 
-        if [ -e $filename ];then
+        if [ -e $fn ];then
             source $fn
+            #echo "found :",$fn
         else
-            if exists fn;then
-                echo "exits"
-            else
-                echo "Error import: $fn do not exist!!!"
-            fi
+            echo "Error import: $fn do not exist!!!"
         fi
     done
 }
+
+function from()

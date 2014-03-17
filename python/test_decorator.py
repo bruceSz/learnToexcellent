@@ -63,3 +63,38 @@ class Foo(object):
     def interface2(self):
         pass
 
+def single(cls):
+    ins = {}
+    def getins(*args):
+        if cls not in ins:
+            ins[cls] = cls(*args)
+        return ins[cls]
+    return getins
+
+@single
+class A:
+    def __init__(self,name):
+        self.name = name
+@single
+class B:
+    def __init__(self,count):
+        self.count = count
+
+if __name__ == '__main__':
+    a1 = A('this is test1')
+    print a1.name
+    a2 = A("test1 is this(this is reverse ,notice!)")
+    print a2.name
+
+    print a1
+    print a2
+
+    b1 = B(1)
+    print b1.count
+
+    b2 = B(2)
+    print b2.count
+     
+    print b1
+    print b2
+
