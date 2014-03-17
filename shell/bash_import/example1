@@ -1,0 +1,4 @@
+print1() {
+    echo "in example1:print1"
+    echo $*
+}
