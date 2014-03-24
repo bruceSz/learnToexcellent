@@ -23,7 +23,7 @@ class Controller(object):
         context = req.environ.get(CONTEXT_ENV,{})
         context['query_string'] = dict(req.params.iteritems())
         context['headers'] = dict(req.headers.iteritems())
-        context['path'] = req.environ('PATH_INFO')
+        context['path'] = req.environ['PATH_INFO']
         params = req.environ.get(PARAMS_ENV,{})
 
         for name in ['REMOTE_USER','AUTH_TYPE']:
@@ -65,6 +65,7 @@ class Router(object):
     @webob.dec.wsgify
     def _dispatch(req):
         match = req.environ['wsgiorg.routing_args'][1]
+        print 'routing to : ',req.environ['wsgiorg.routing_args']
 
         if not match:
             return webob.exc.HTTPNotFound()
@@ -79,7 +80,7 @@ class Router(object):
 if __name__ == '__main__':
     configfile = 'testroutes.ini'
     appname = "main"
-    wsgi_app = ("config:%s"%os.path.abspath(configfile),appname)
+    wsgi_app = loadapp("config:%s"%os.path.abspath(configfile),appname)
     print dir(wsgi_app)
     httpd = make_server('localhost',8282,wsgi_app)
     httpd.serve_forever()
