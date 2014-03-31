@@ -1,4 +1,5 @@
 def smart_sort(L):
+    """ worst case is n^2 """
     index1=1
     index3=len(L)-1 
     print index1,index3
@@ -15,10 +16,14 @@ def smart_sort(L):
         else:
             index2 = index1+1
             print index2
-            while L[index2] != 1 and index2 < index3:
+            while L[index2] != 1 and index2 <= index3:
                 index2 += 1
 
-            L[index1],L[index2] = L[index2],L[index1]
+            if index2 <= index3:
+                L[index1],L[index2] = L[index2],L[index1]
+            else:
+                index1+=1
+                
 
         while L[index1] == 1:
             index1 += 1
