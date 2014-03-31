@@ -33,6 +33,15 @@ function get_real_path() {
 
     
 }
+
+function from(){
+    args="$@"
+    dirs=""
+
+    for arg in $args;do
+        
+    done
+}
 function import() {
     filenames="$*"
     filenames=$(echo $filenames|sed 's/,/ /g')
