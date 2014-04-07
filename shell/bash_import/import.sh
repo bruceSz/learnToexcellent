@@ -1,6 +1,7 @@
-@absolute
 function exists() {
     #echo $*
+
+   return
 
     #parrents=$(pwd|sed '/\// /g')
     #for i in $parrents;
@@ -36,10 +37,36 @@ function get_real_path() {
 
 function from(){
     args="$@"
-    dirs=""
+    is_dir=true
+    dir=""
+    i=0
+    
 
     for arg in $args;do
-        
+        if [ "$arg" = "import" ];then
+            is_dir=true
+        else
+            if  $is_dir ;then
+                dir=$arg
+            else
+                echo $arg
+                arg=$(echo $arg|sed '/,/ /g')
+                for ar in $arg;do
+                    echo $ar
+                done
+
+                #filenames[$i]=$arg
+                #i=$((i+1))
+
+            fi
+        fi
+
+    done
+
+    echo $dir
+
+    for filename in ${filenames[@]};do
+        echo $filename
     done
 }
 function import() {
@@ -57,5 +84,5 @@ function import() {
         fi
     done
 }
+from  ex_dir import example
 
-function from()
