@@ -1,6 +1,9 @@
-@absolute
+
+
 function exists() {
     #echo $*
+
+   return
 
     #parrents=$(pwd|sed '/\// /g')
     #for i in $parrents;
@@ -35,12 +38,43 @@ function get_real_path() {
 }
 
 function from(){
+    # The possible usage example is: from xxx.xxx import yy,yy,yy.
+    # Here xxx means dir name,while yy means filename. 
     args="$@"
-    dirs=""
+    is_dir=true
+    dir=""
+    files=""
+    
 
     for arg in $args;do
-        
+        if [ "$arg" = "import" ];then
+            #echo "meet keyword import:" $arg
+            is_dir=false
+        else
+            if  $is_dir ;then
+                # only support one dir,hence the judge is supposed to be entered once. 
+                dir=$arg
+            else
+                # same as above,the branch should be entered only once
+                files=$(echo $arg|sed 's/,/ /g')
+
+                #filenames[$i]=$arg
+                #i=$((i+1))
+
+            fi
+        fi
+
     done
+
+    #echo $dir
+    for file in $files;do
+        fullpath=$dir.$file
+        import $fullpath
+    done
+
+    #for filename in ${filenames[@]};do
+    #    echo $filename
+    #done
 }
 function import() {
     filenames="$*"
@@ -58,4 +92,3 @@ function import() {
     done
 }
 
-function from()
