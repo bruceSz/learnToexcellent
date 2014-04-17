@@ -1,9 +1,10 @@
-problem NO      description
+problem NO      description                                 status
 
-1               reverse words of a string
-2               evaluate reverse polish notation
-3               Max Points on a Line
-4               Max sum of sub array(successive)
+1               reverse words of a string                   done
+2               evaluate reverse polish notation            done
+3               Max Points on a Line                        xxx
+4               Max sum of sub array(successive)            done
+5               sort list in NlgN                           done                           
 
 
 
