@@ -2,6 +2,7 @@ Note:
     'done' means pass
     'xxx' means unfinished
     '---' means time limit exceeded
+    '***' means wrong answer。
     
 
 problem NO      description                                 status
@@ -12,7 +13,7 @@ problem NO      description                                 status
 4               Max sum of sub array(successive)            done
 5               sort list in NlgN                           done         
 6               insertion Sort List                         ---
-
+7 				LRU Cache	                                ***								
 
 
 
