@@ -13,7 +13,9 @@ problem NO      description                                 status
 4               Max sum of sub array(successive)            done
 5               sort list in NlgN                           done         
 6               insertion Sort List                         ---
-7 				LRU Cache	                                ***								
+7 				LRU Cache	                                ***					
+8               find list cycle.                            done
+9               fine where list cycle happens.                  			
 
 
 
