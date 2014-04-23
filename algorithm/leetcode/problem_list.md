@@ -15,7 +15,8 @@ problem NO      description                                 status
 6               insertion Sort List                         ---
 7 				LRU Cache	                                ***					
 8               find list cycle.                            done
-9               fine where list cycle happens.                  			
+9               fine where list cycle happens.              done
+10              reorder List                                done			
 
 
 
