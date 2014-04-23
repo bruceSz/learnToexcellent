@@ -16,7 +16,8 @@ problem NO      description                                 status
 7 				LRU Cache	                                ***					
 8               find list cycle.                            done
 9               fine where list cycle happens.              done
-10              reorder List                                done			
+10              reorder List                                done
+11              preorder traverse of binary                 done
 
 
 
