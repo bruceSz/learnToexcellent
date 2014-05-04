@@ -19,6 +19,7 @@ problem NO      description                                 status
 10              reorder List                                done
 11              preorder traverse of binary                 done
 12              string to int                               done
+13              post order traversal tree                   done
 
 
 
