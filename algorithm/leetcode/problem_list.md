@@ -20,7 +20,8 @@ problem NO      description                                 status
 11              preorder traverse of binary                 done
 12              string to int                               done
 13              post order traversal tree                   done
-14              word break                                  ---
+14              word break                                  done
+15              word break :find all break lisk             done
 
 
 

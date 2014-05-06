@@ -2,7 +2,7 @@ class Solution:
     # @param s,a string
     # @param dict, a set of string
     # @return a boolean
-    def wordBreak(self,s,dict_):
+    def wordBreak1(self,s,dict_):
         if len(s) == 0:
             # this judgement is only used when input string s is empty string
             # assume there is no empty string '' in dict_
@@ -24,6 +24,42 @@ class Solution:
             return reduce(lambda x,y:x|y,ret)
         else:
             return False
+
+    def wordBreak(self,s,dict_):
+        # assume is is not None
+        if len(s)== 0:
+            if s in dict_:
+                return True
+            return False
+
+        tmp_result = {}
+        for i in xrange(len(s)-1,-1,-1):
+            suffix = s[i:]
+            for j in xrange(1,len(suffix)+1):
+                prefix = suffix[:j]
+                if prefix in dict_:
+                    # The whole word is in dict_
+                    if suffix[j:]=='':
+                        tmp_result[suffix]=True
+                        break
+
+                    else:
+                        result = tmp_result[suffix[j:]]
+                        if result:
+                            tmp_result[suffix]=True
+                            break
+
+            if not suffix in tmp_result:
+                tmp_result[suffix] = False
+
+        return tmp_result[s]
+                            
+                            
+                        
+                        
+            
+
+
 
 
 
