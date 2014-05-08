@@ -3,6 +3,7 @@ Note:
     'xxx' means unfinished
     '---' means time limit exceeded
     '***' means wrong answer。
+
     
 
 problem NO      description                                 status
@@ -22,7 +23,8 @@ problem NO      description                                 status
 13              post order traversal tree                   done
 14              word break                                  done
 15              word break :find all break lisk             done
-
+16              single number                               done
+17              single number 2                             
 
 
 
