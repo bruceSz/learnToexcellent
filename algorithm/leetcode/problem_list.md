@@ -25,5 +25,6 @@ problem NO      description                                 status
 15              word break :find all break lisk             done
 16              single number                               done
 17              single number 2                             done
+18              candy                                       
 
 
