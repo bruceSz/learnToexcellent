@@ -1,0 +1,12 @@
+import pika
+import sys
+
+connection = pika.BlockingConnection(pika.ConnectionParameters(
+        host = "localhost"))
+
+channel = connection.channel()
+
+channel.exchange_declare(exchange='topic_logs',
+                         type="topic")
+
+result = channel.queue_declare(exclusive=True)
