@@ -1,7 +1,19 @@
 def goldenLeader(A):
     n = len(A)
+    # size is the depth of stack
     size = 0
+    for i in xrange(n):
+        if size == 0:
+            candidate = A[i]
+            size += 1
+        else:
+            if A[i]==candidate:
+                size += 1
+            else:
+                size -= 1
 
+    return candidate
+                
 def fastLeader(A):
     n = len(A)
     leader = -1
@@ -33,7 +45,7 @@ def slowLeader(A):
 
 def testLeader():
     A= [1,2,3,4,2,2,2,2,2,5]
-    print fastLeader(A)
+    print goldenLeader(A)
 
 if __name__ == '__main__':
     testLeader()
