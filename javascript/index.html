@@ -1,16 +1,24 @@
-<ul>
-    <li>
-        <span>Nexus S</span>
-        <p>
-            Fast just got  faster with Nexus 5
-        </p>
+<html ng-app>
+    <head>
+        <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="js/controller.js"></script>
 
-    </li>
-    <li>
-        <span>Motorala XOOM*  with Wi-Fi</span>
-        <p>
-            The Next ,Next generation tablet.
-        </p>
-    </li>
-    <p>Total number of phones: 2</p>
-</ul>
+    </head>
+    <body ng-controller="PhoneListCtrl">
+        <li ng-repeat="phone in phones">
+            {{phone.name}}
+            <p>{{phone.snippet}}</p>
+        </li>
+
+        <li>Total number of phones: {{phones.length}}</li>
+        <li>{{hello}}</li>
+        <table>
+            <tr><th>row number</th></tr>
+            <tr ng-repeat="i in [0,1,2,3,4,5]"><td>{{i}}</td></tr>
+        </table>
+        <table>
+            <tr><th>row number</th></tr>
+            <tr ng-repeat="i in [0,1,2,3,4]"><td>{{i+1}}</td></tr>
+        </table>
+    </body>
+</html>
