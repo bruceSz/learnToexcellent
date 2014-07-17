@@ -1,0 +1,13 @@
+                          _           _                       _       
+     Welcome to          | |         (_)                     | |      
+  ___ _   _ ___  __ _  __| |_ __ ___  _ _ __     ___ __ _ ___| |_ ___ 
+ / __| | | / __|/ _` |/ _` | '_ ` _ \| | '_ \   / __/ _` / __| __/ __|
+ \__ \ |_| \__ \ (_| | (_| | | | | | | | | | | | (_| (_| \__ \ |_\__ \
+ |___/\__, |___/\__,_|\__,_|_| |_| |_|_|_| |_|  \___\__,_|___/\__|___/
+       __/ |                                                          
+      |___/        Episode #8 - Learning Puppet with Vagrant
+                  
+  See http://sysadmincasts.com/episodes/8-learning-puppet-with-vagrant
+
+  p.s. configuration management handled by puppet.
+
