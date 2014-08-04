@@ -4,6 +4,7 @@ import unittest
 class TestSequenceFunctions(unittest.TestCase):
     def setUp(self):
         self.seq = range(10)
+        print 'setUp running once'
 
     def test_shuffle(self):
         random.shuffle(self.seq)
