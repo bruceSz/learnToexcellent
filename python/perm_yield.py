@@ -29,8 +29,8 @@ def perm(items):
     return ret
 
 if __name__ == '__main__':
-    print perm([1,2,3])
-    for p in y_perm([1,2,3]):
+    print perm('abc')
+    for p in y_perm('def'):
         print p
         #pass
     
